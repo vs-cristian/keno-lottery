@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Button } from "../components/shared";
-import WinSrc from "../images/win.png";
+import useBet from "../hooks/useBet";
 
 const WinScreenRoot = styled.div`
   height: 100%;
@@ -43,12 +43,13 @@ const WinScreenMenu = styled.div`
 `;
 
 const WinScreen = () => {
+  const [bet] = useBet();
+
   return (
     <WinScreenRoot>
       <WinScreenLogo src="/images/win.png" alt="keno logo" />
       <WinScreenTitle>
-        You Won <br />
-        $1,000,000
+        You Won <br />${bet},000
       </WinScreenTitle>
       <WinScreenText>
         Congratulations! <br /> You've won the lottery

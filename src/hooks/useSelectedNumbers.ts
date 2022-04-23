@@ -16,6 +16,10 @@ const useSelectedNumbers = () => {
   const [state, setState] = useRecoilState(selectedNumbersState);
 
   const isEmpty = useMemo(() => !state.some(Boolean), [state]);
+  const isFullFiled = useMemo(
+    () => !state.some((number) => number === null),
+    [state]
+  );
 
   const _updateAtIndex =
     (index: number, value: SelectedNumbersState[number]) =>
@@ -81,6 +85,7 @@ const useSelectedNumbers = () => {
     },
     {
       isEmpty,
+      isFullFiled,
     },
   ] as const;
 };

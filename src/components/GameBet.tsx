@@ -22,7 +22,7 @@ const GameBet = () => {
         <Button
           variant="primary"
           onClick={handleClickStart}
-          disabled={Boolean(meta.isEmpty || !bet)}
+          disabled={Boolean(!meta.isFullFiled || !bet)}
         >
           Start
         </Button>
