@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router";
 import styled, { css } from "styled-components";
 import GameBet from "../components/GameBet";
 import GameContent from "../components/GameContent";
-import { Button, VStack } from "../components/shared";
+import { Button } from "../components/shared";
 import useSelectedNumbers from "../hooks/useSelectedNumbers";
 
 const AppTitle = styled.h2`

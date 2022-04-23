@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Button } from "../components/shared";
 import useReset from "../hooks/useReset";
-import logoSrc from "../images/logo.png";
 
 const IntroScreenRoot = styled.div`
   height: 100%;
@@ -49,7 +48,7 @@ const IntroScreen = () => {
 
   return (
     <IntroScreenRoot>
-      <IntroScreenLogo src={logoSrc} alt="keno logo" />
+      <IntroScreenLogo src="/images/logo.png" alt="keno logo" />
       <IntroScreenTitle>
         Keno <span>Lottery</span>
       </IntroScreenTitle>

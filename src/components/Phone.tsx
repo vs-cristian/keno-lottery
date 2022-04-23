@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import phoneSrc from "../images/phone.png";
 
 const Container = styled.div`
   @media (min-width: 430px) {
@@ -44,7 +43,7 @@ type Props = {
 const Phone = ({ children }: Props) => {
   return (
     <Container>
-      <PhoneImage src={phoneSrc} alt="phone background" />
+      <PhoneImage src="/images/phone.png" alt="phone background" />
       <PhoneContent>{children}</PhoneContent>
     </Container>
   );

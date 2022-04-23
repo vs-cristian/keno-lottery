@@ -45,7 +45,7 @@ const WinScreenMenu = styled.div`
 const WinScreen = () => {
   return (
     <WinScreenRoot>
-      <WinScreenLogo src={WinSrc} alt="keno logo" />
+      <WinScreenLogo src="/images/win.png" alt="keno logo" />
       <WinScreenTitle>
         You Won <br />
         $1,000,000
