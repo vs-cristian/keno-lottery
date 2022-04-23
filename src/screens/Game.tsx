@@ -1,10 +1,8 @@
 import React, { Fragment } from "react";
 import { Route, Routes } from "react-router";
-import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
-import Bet from "../components/Bet";
-import Numbers from "../components/Numbers";
-import NumbersToolbar from "../components/NumbersToolbar";
+import GameBet from "../components/GameBet";
+import GameContent from "../components/GameContent";
 import { Button, VStack } from "../components/shared";
 import useSelectedNumbers from "../hooks/useSelectedNumbers";
 
@@ -39,7 +37,7 @@ const SelectedNumber = styled(Button)<{ active?: boolean }>`
 
 const MainContainer = styled.div`
   background: #fff;
-  border-radius: 3.2rem;
+  border-radius: 3.2rem 3.2rem 0 0;
   height: 30rem;
   flex-grow: 1;
   display: flex;
@@ -78,37 +76,8 @@ const GameScreen = () => {
 
       <MainContainer>
         <Routes>
-          <Route
-            index
-            element={
-              <Fragment>
-                <div>
-                  <NumbersToolbar />
-                  <Numbers selectedNumbers={numbers} />
-                </div>
-
-                <Button variant="primary" as={Link} to="bet">
-                  Place Bet
-                </Button>
-              </Fragment>
-            }
-          />
-
-          <Route
-            path="bet"
-            element={
-              <Fragment>
-                <Bet />
-
-                <VStack>
-                  <Button variant="primary">Start</Button>
-                  <Button variant="secondary" as={Link} to="/game">
-                    Back
-                  </Button>
-                </VStack>
-              </Fragment>
-            }
-          />
+          <Route index element={<GameContent />} />
+          <Route path="bet" element={<GameBet />} />
         </Routes>
       </MainContainer>
     </Fragment>

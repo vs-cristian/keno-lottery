@@ -58,9 +58,6 @@ const IntroScreen = () => {
         <Button variant="secondary" onClick={reset} as={Link} to="game">
           New Game
         </Button>
-        <Button variant="secondary" as={Link} to="settings">
-          Settings
-        </Button>
       </IntroScreenMenu>
     </IntroScreenRoot>
   );

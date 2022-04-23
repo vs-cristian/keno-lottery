@@ -5,7 +5,7 @@ import AppHeader from "./components/AppHeader";
 import Phone from "./components/Phone";
 import GameScreen from "./screens/Game";
 import IntroScreen from "./screens/Intro";
-import SettingsScreen from "./screens/Settings";
+import WinScreen from "./screens/Win";
 
 const Root = styled.main`
   display: flex;
@@ -30,7 +30,7 @@ const App: React.FC = () => {
           <Routes>
             <Route index element={<IntroScreen />} />
             <Route path="game/*" element={<GameScreen />} />
-            <Route path="options" element={<SettingsScreen />} />
+            <Route path="win" element={<WinScreen />} />
           </Routes>
         </AppContent>
       </Phone>

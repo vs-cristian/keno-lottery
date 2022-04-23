@@ -8,6 +8,7 @@ const NumbersToolbarRoot = styled.div`
   padding: 1rem 0;
   display: flex;
   justify-content: flex-end;
+  flex-shrink: 0;
 
   & > *:not(:last-of-type) {
     margin-right: 1rem;

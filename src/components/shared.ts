@@ -24,6 +24,11 @@ export const Button = styled(ButtonBase)<{ variant?: "primary" | "secondary" }>`
     box-shadow: inset 0 0.1rem 0 0.1rem rgb(0 0 0 / 25%);
   }
 
+  &:disabled {
+    opacity: 0.3;
+    cursor: default;
+  }
+
   ${(p) =>
     p.variant === "primary" &&
     css`

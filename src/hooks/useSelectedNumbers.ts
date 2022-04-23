@@ -5,12 +5,12 @@ export type SelectedNumbersState = (number | null)[];
 
 const initialState = [null, null, null, null, null];
 
+export const MAX_NUMBER = 80;
+
 const selectedNumbersState = atom<SelectedNumbersState>({
   key: "SelectedNumbers",
   default: initialState,
 });
-
-const maxNumber = 30;
 
 const useSelectedNumbers = () => {
   const [state, setState] = useRecoilState(selectedNumbersState);
@@ -63,7 +63,7 @@ const useSelectedNumbers = () => {
   const randomizeNumbers = () => {
     const numbers = [];
     while (numbers.length < initialState.length) {
-      const r = Math.floor(Math.random() * maxNumber) + 1;
+      const r = Math.floor(Math.random() * MAX_NUMBER) + 1;
       if (numbers.indexOf(r) === -1) numbers.push(r);
     }
 
@@ -81,7 +81,6 @@ const useSelectedNumbers = () => {
     },
     {
       isEmpty,
-      maxNumber,
     },
   ] as const;
 };
